@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: vasy
+Build-Jdk: 11.0.13
+Implementation-Title: spring-mvc-app1 Maven Webapp
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: ru.alishev.springcourse
+Implementation-URL: http://www.example.com
+Created-By: Maven Integration for Eclipse
+
