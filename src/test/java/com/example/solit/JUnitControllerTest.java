@@ -12,9 +12,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.example.solit.controller.AuthController;
 import com.example.solit.controller.HomeController;
 //@RunWith необходима для включения тестирования интеграции Spring
+//запустить тест 
 //@RunWith (SpringRunner.class) обеспечивает мост между функциями тестирования Spring Boot и JUnit. Эта аннотация потребуется всякий раз, когда мы используем какие-либо функции тестирования 
-//Spring Boot в наших тестах JUnit.
+//Spring Boot в наших тестах JUnit.Это обеспечивает полную поддержку загрузки контекста spring и внедрения зависимостей  тоесть бинов доступ к ним компонентов в тестах.
 @RunWith(SpringRunner.class)
+
 //анотацыя Чтобы протестировать компонент / компонент в приложении Spring Boot,
 //@SpringBootTest нужен чтобы загрузит полный контекст приложения,и протестировать любойбин 
 //обезательно название тестого  пакета должно быть такимже как и приложения !!!!!
@@ -25,6 +27,7 @@ public class JUnitControllerTest {
 //@Test — определение данного метода в качестве тестируемого (по сути — метод, помеченный данной аннотацией и есть модульный тест).
     @Test
     public void testHomeController() {
+    	//простой тест без загрузки контенера 
     	//создать обьект без запуска сприга если хотим запустить одельно 
    	//HomeController  homeController = new HomeController();
         String result = homeController.home();
